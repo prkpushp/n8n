@@ -32,7 +32,7 @@
 ```bash
     server {
         listen 80;
-        server_name n8n.cloudblog.fun
+        server_name n8n.cloudblog.fun;
 
         location / {
         proxy_pass http://localhost:5678;
