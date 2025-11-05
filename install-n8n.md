@@ -1,5 +1,5 @@
 # Video Tutorial 
-[https://youtube.com)]
+https://youtube.com
 
 
 ## Step 1: Install Docker
