@@ -1,5 +1,5 @@
 # Video Tutorial 
-[![Install N8N on Linux/GCP/AWS/Oracle)
+[https://youtube.com)]
 
 
 ## Step 1: Install Docker
