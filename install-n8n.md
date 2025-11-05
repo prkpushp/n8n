@@ -50,7 +50,7 @@ https://youtube.com
         }
     }
 ```
-    **Enable and restart:**
+**Enable and restart:**
 ```bash
     sudo ln -s /etc/nginx/sites-available/n8n.conf /etc/nginx/sites-enabled/
     sudo nginx -t
