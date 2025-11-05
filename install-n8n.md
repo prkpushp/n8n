@@ -24,3 +24,40 @@
 ```
 ## Step 3: Installing Nginx (used as a reverse proxy to n8n and handle SSL termination)
 
+```bash
+   sudo apt install nginx
+   sudo vi /etc/nginx/sites-available/n8n.conf
+```
+   **Paste the Following data: Replace your domain/subdomain n8n.cloudblog.fun**
+    ```bash
+    server {
+        listen 80;
+        server_name n8n.cloudblog.fun
+
+        location / {
+        proxy_pass http://localhost:5678;
+        proxy_http_version 1.1;
+        chunked_transfer_encoding off;
+        proxy_buffering off;
+        proxy_cache off;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_read_timeout 86400;
+        }
+    }
+    ```
+    **Enable and restart:**
+    ```bash
+    sudo ln -s /etc/nginx/sites-available/n8n.conf /etc/nginx/sites-enabled/
+    sudo nginx -t
+    sudo systemctl restart nginx
+
+## Step 4: Setting up SSL with Certbot
+```bash
+   sudo apt install certbot python3-certbot-nginx
+   sudo certbot --nginx -d n8n.cloudblog.fun
+```
