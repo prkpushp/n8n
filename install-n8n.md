@@ -51,10 +51,11 @@
     }
 ```
     **Enable and restart:**
-    ```bash
+```bash
     sudo ln -s /etc/nginx/sites-available/n8n.conf /etc/nginx/sites-enabled/
     sudo nginx -t
     sudo systemctl restart nginx
+```
 
 ## Step 4: Setting up SSL with Certbot
 ```bash
