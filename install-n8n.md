@@ -29,7 +29,7 @@
    sudo vi /etc/nginx/sites-available/n8n.conf
 ```
    **Paste the Following data: Replace your domain/subdomain n8n.cloudblog.fun**
-    ```bash
+```bash
     server {
         listen 80;
         server_name n8n.cloudblog.fun
@@ -49,7 +49,7 @@
         proxy_read_timeout 86400;
         }
     }
-    ```
+```
     **Enable and restart:**
     ```bash
     sudo ln -s /etc/nginx/sites-available/n8n.conf /etc/nginx/sites-enabled/
