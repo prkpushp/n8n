@@ -1,6 +1,5 @@
 # Video Tutorial 
-[https://youtube.com
-](https://youtu.be/a7b9bz8o7VI)
+https://youtu.be/a7b9bz8o7VI
 
 ## Step 1: Install Docker
 ```bash
